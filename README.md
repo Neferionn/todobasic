@@ -1,4 +1,5 @@
 ## TO DO APP (only htmlcss)
 
-$ npm i
-$ live-server
+### $ npm i
+
+### $ live-server
