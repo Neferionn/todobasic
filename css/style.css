@@ -3,40 +3,48 @@
   padding: 0;
   margin: 0;
 }
+
 html {
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
+
 body {
   /**/
   background-color: rgb(22, 1, 24);
 }
+
 input,
 button {
   border: none;
   outline: none;
 }
+
 li {
   text-indent: 0;
   list-style-type: none;
 }
+
 :root {
   --effect-color: rgb(100, 7, 88);
   --secondary-color: #3500f5;
   --text-color: white;
 }
-.flexbox-container {
+
+.flexboxContainer {
   padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 h1 {
   font-size: 3em;
   color: var(--secondary-color);
 }
-.flex-input {
+
+.flexInput {
   width: 400px;
   align-self: center;
   padding: 10px;
@@ -44,6 +52,7 @@ h1 {
   justify-content: space-between;
   height: 60px;
 }
+
 .newItemInput {
   border: 3px solid var(--secondary-color);
   padding: 8px;
@@ -51,10 +60,12 @@ h1 {
   color: var(--text-color);
   background-color: rgb(22, 1, 24);
 }
+
 .newItemInput:focus {
   border: 3px solid var(--effect-color);
   transition: 0.6s;
 }
+
 .submit {
   width: 60px;
   background-color: var(--secondary-color);
@@ -63,12 +74,13 @@ h1 {
   font-size: 1em;
   cursor: pointer;
 }
+
 .submit:hover {
   transition: ease-in 0.4s;
   background-color: var(--effect-color);
 }
 
-.flex-item {
+.flexItem {
   width: 400px;
   height: auto;
   margin: 5px;
@@ -80,16 +92,17 @@ h1 {
   justify-content: space-between;
   color: var(--text-color);
 }
-.flex-item:hover {
+
+.flexItem:hover {
   border-bottom: 3px solid var(--effect-color);
   transition: ease-in 0.7s;
 }
 
-.flex-item .item-text {
+.flexItem .item-text {
   align-self: center;
 }
 
-.btns-opt button {
+.btnsOpt button {
   width: 50px;
   margin-left: 5px;
   height: auto;
@@ -100,21 +113,23 @@ h1 {
   font-weight: 600;
   margin-top: 2px;
 }
-.btns-opt button:nth-child(1) {
+
+.btnsOpt button:nth-child(1) {
   background-color: green;
   opacity: 0.6;
 }
-.btns-opt button:nth-child(1):hover {
+
+.btnsOpt button:nth-child(1):hover {
   opacity: 1;
   transition: 0.6s;
 }
 
-.btns-opt button:nth-child(2) {
+.btnsOpt button:nth-child(2) {
   background-color: red;
   opacity: 0.6;
 }
 
-.btns-opt button:nth-child(2):hover {
+.btnsOpt button:nth-child(2):hover {
   opacity: 1;
   transition: 0.6s;
 }
