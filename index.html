@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDoApp</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="back.js"></script>
   </head>
   <body>
     <main>
       <div class="flexboxContainer">
         <h1>To Do App</h1>
-        <div class="flexInput">
-          <input type="text" placeholder="New item" class="newItemInput" />
+        <form class="flexInput">
+          <input type="text" placeholder="New item" class="newItemInput" name="" />
           <input type="submit" value="Add" class="submit" />
-        </div>
-        <div class="items">
-          <li class="flexItem">
+        </form>
+        <ul class="items">
+          <!-- <li class="flexItem">
             <div class="itemText">To do item 5</div>
             <div class="btnsOpt"><button>Edit</button><button>X</button></div>
           </li>
@@ -35,8 +36,8 @@
           <li class="flexItem">
             <div class="itemText">To do item 1</div>
             <div class="btnsOpt"><button>Edit</button><button>X</button></div>
-          </li>
-        </div>
+          </li> -->
+        </ul>
       </div>
     </main>
   </body>

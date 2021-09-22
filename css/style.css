@@ -51,6 +51,9 @@ h1 {
   display: flex;
   justify-content: space-between;
   height: 60px;
+  border: 3px solid var(--secondary-color);
+  border-bottom: none;
+  border-radius: 15px 15px 0 0;
 }
 
 .newItemInput {
@@ -80,10 +83,19 @@ h1 {
   background-color: var(--effect-color);
 }
 
-.flexItem {
+.items {
   width: 400px;
+  padding: 10px;
+  border: 3px solid var(--secondary-color);
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+  padding-bottom: 10px;
+}
+
+.flexItem {
+  width: auto;
   height: auto;
-  margin: 5px;
+  /* margin: 5px; */
   border-bottom: 3px solid var(--secondary-color);
   background-color: #18355a;
   padding: 15px 10px;
