@@ -4,18 +4,6 @@ const inputValue = document.querySelector(".newItemInput");
 const btnSubmit = document.querySelector(".submit");
 const btnDelete = document.querySelector(".delete");
 
-const itemListArr = [];
-
-// const displayItems = function () {
-//   const item = itemListArr.map(item => {
-//     return `<li class="flexItem">
-//     <div class="itemText">${item.name}</div>
-//     <div class="btnsOpt"><button>Edit</button><button>X</button></div>
-//     </li>`;
-//   });
-//   listItemContainer.insertAdjacentHTML('afterbegin', item);
-// };
-
 const itemFns = e => {
   const li = document.createElement("li");
   const title = document.createElement("div");
