@@ -12,6 +12,9 @@ html {
 body {
   /**/
   background-color: rgb(22, 1, 24);
+  color: white;
+  font-family: sans-serif;
+  min-height: 100vh;
 }
 
 input,
@@ -29,153 +32,141 @@ li {
   display: none;
 }
 
-.flexReverse {
-  flex-direction: row-reverse;
-}
 :root {
   --effect-color: rgb(100, 7, 88);
   --secondary-color: #3500f5;
   --text-color: white;
 }
 
-.flexboxContainer {
-  padding: 30px;
+header {
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--effect-color);
+}
+
+main {
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  min-height: 10vh;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-h1 {
-  font-size: 3em;
-  color: var(--secondary-color);
+form {
 }
 
-.flexInput {
-  width: 400px;
-  align-self: center;
-  padding: 10px;
-  display: flex;
-  margin-top: 10px;
-  padding-top: 10px;
-  justify-content: space-between;
-  height: 60px;
-  border: 3px solid var(--secondary-color);
-  border-bottom: none;
-  border-radius: 15px 15px 0 0;
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
 }
 
 .newItemInput {
-  border: 3px solid var(--secondary-color);
-  padding: 10px 8px;
-  width: 300px;
+  border: 2px solid var(--secondary-color);
+  /* padding: 10px 8px; */
   color: var(--text-color);
   background-color: rgb(22, 1, 24);
 }
 
-.newItemInput:focus {
-  border: 3px solid var(--effect-color);
-  transition: 0.6s;
-}
-
-.submit {
-  width: 60px;
+form button {
+  width: auto;
+  cursor: pointer;
   background-color: var(--secondary-color);
   color: var(--text-color);
+
   font-weight: 600;
-  font-size: 1em;
-  cursor: pointer;
+  border: 2px solid var(--secondary-color);
+  transition: all 0.3s ease;
 }
 
-.submit:hover {
+.disabledBtn {
+  color: gray;
+}
+
+form button:hover {
   transition: ease-in 0.4s;
+  // border: 2px solid var(--effect-color);
   background-color: var(--effect-color);
 }
 
-.items {
-  width: 400px;
-  padding: 10px;
-  border: 3px solid var(--secondary-color);
-  border-top: none;
-  border-radius: 0 0 15px 15px;
-  padding-bottom: 10px;
+.todoContainer {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
-.flexItem {
-  width: auto;
-  height: auto;
-  margin: 5px;
-  border-bottom: 3px solid var(--secondary-color);
+.itemsList {
+  width: 500px;
+}
+
+.item {
+  margin: 0.5rem;
+  padding: 0.75rem;
   background-color: #18355a;
-  padding: 15px 10px;
-  font-weight: 600;
+  color: var(--text-color);
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
-  color: var(--text-color);
+  align-items: center;
+  transition: all 0.5 ease;
+  border-bottom: 3px solid var(--secondary-color);
 }
 
-.flexItem:hover {
+.item:hover {
   border-bottom: 3px solid var(--effect-color);
   transition: ease-in 0.7s;
 }
 
-.flexItem .item-text {
-  align-self: center;
+.item li {
+  flex: 1;
 }
 
-.editInput {
-  width: auto;
-  height: auto;
-  float: left;
-  color: white;
-  background-color: #18355a;
-  border: 2px solid var(--secondary-color);
-  padding: 0px 5px;
-}
-
-.btnsOpt {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.btnsOpt button {
+.btnDel,
+.btnMark {
+  background: red;
   width: 50px;
+  height: 25px;
   margin-left: 5px;
-  height: auto;
-  font-size: 1em;
   color: var(--text-color);
+  font-size: 1.1rem;
   cursor: pointer;
-  padding: 1px;
+  border: none;
   font-weight: 600;
   margin-top: 2px;
+  opacity: 0.5;
 }
 
-.btnsOpt .btnEdit {
+.btnMark {
   background-color: green;
-  opacity: 0.6;
 }
 
-.btnsOpt .btnEdit:hover {
+.btnMark:hover,
+.btnDel:hover {
   opacity: 1;
   transition: 0.6s;
 }
 
-.btnsOpt .btnSave {
-  background-color: green;
-  opacity: 0.6;
+.newItem {
+  padding: 0rem 0.5rem;
 }
 
-.btnsOpt .btnSave:hover {
-  opacity: 1;
-  transition: 0.6s;
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
-.btnsOpt .btnDelete {
-  background-color: red;
-  opacity: 0.6;
-}
-
-.btnsOpt .btnDelete:hover {
-  opacity: 1;
-  transition: 0.6s;
+.disappear {
+  opacity: 0;
+  transition: 1s ease-out;
 }

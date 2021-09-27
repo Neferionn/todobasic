@@ -4,45 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDoApp</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>To Do App</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
+    <header>To Do App</header>
     <main>
-      <div class="flexboxContainer">
-        <h1>To Do App</h1>
-        <form class="flexInput">
-          <input
-            type="text"
-            placeholder="New item"
-            class="newItemInput"
-            name=""
-          />
-          <input type="submit" value="Add" class="submit" />
-        </form>
-        <ul class="items">
-          <!-- <li class="flexItem">
-            <div class="itemText">To do item 5</div>
-            <div class="btnsOpt"><button>Edit</button><button>X</button></div>
-          </li>
-          <li class="flexItem">
-            <div class="itemText">To do item 4</div>
-            <div class="btnsOpt"><button>Edit</button><button>X</button></div>
-          </li>
-          <li class="flexItem">
-            <div class="itemText">To do item 3</div>
-            <div class="btnsOpt"><button>Edit</button><button>X</button></div>
-          </li>
-          <li class="flexItem">
-            <div class="itemText">To do item 2</div>
-            <div class="btnsOpt"><button>Edit</button><button>X</button></div>
-          </li>
-          <li class="flexItem">
-            <div class="itemText">To do item 1</div>
-            <div class="btnsOpt"><button>Edit</button><button>X</button></div>
-          </li> -->
-        </ul>
+      <form>
+        <input type="text" class="newItemInput" />
+        <button class="btnSubmit disabledBtn" type="submit" disabled>
+          Add
+        </button>
+      </form>
+      <div class="todoContainer">
+        <ul class="itemsList"></ul>
       </div>
     </main>
   </body>
