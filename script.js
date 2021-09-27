@@ -32,7 +32,7 @@ const addItem = e => {
   btnSubmit.classList.add('disabledBtn');
 };
 
-const deleteCheck = e => {
+const deleteAndCheck = e => {
   const element = e.target;
   if (element.classList[0] === 'btnDel') {
     const parent = element.parentElement;
@@ -45,10 +45,10 @@ const deleteCheck = e => {
 
   if (element.classList[0] === 'btnMark') {
     const parent = element.parentElement;
-
     const liChild = parent.firstChild;
 
     liChild.classList.toggle('completed');
+    parent.classList.toggle('greenBottomBorder');
   }
 };
 
@@ -78,7 +78,7 @@ const getTodo = () => {
 
     const newItem = document.createElement('li');
     newItem.innerText = todo;
-    newItem.classList.add('todo-item');
+    newItem.classList.add('newItem');
 
     itemContainer.appendChild(newItem);
 
@@ -118,4 +118,4 @@ function btnToggle() {
 input.addEventListener('change', btnToggle);
 document.addEventListener('DOMContentLoaded', getTodo);
 btnSubmit.addEventListener('click', addItem);
-itemsList.addEventListener('click', deleteCheck);
+itemsList.addEventListener('click', deleteAndCheck);
