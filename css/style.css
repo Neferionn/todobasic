@@ -113,6 +113,11 @@ form button:hover {
   background-color: var(--effect-color);
 }
 
+form input:focus {
+  outline: rgb(255, 0, 200);
+  border: 2px solid rgb(255, 0, 200);
+}
+
 .todoContainer {
   padding: 0.5rem;
   display: flex;
