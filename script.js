@@ -18,35 +18,22 @@ const addItem = (e) => {
   itemContainer.appendChild(newItem);
 
   const btnMark = document.createElement("button");
-  btnMark.innerHTML = "✔";
+  btnMark.innerHTML = "✔️";
   btnMark.classList.add("btnMark");
   itemContainer.appendChild(btnMark);
   localSave({ name: input.value, date: itemAddDate });
   const btnDel = document.createElement("button");
-  btnDel.innerHTML = "✖";
+  btnDel.innerHTML = "✖️";
   btnDel.classList.add("btnDel");
   itemContainer.appendChild(btnDel);
 
-  // const itemTextDate = document.createElement("div");
-  // itemContainer.appendChild(itemTextDate);
-  // itemTextDate.innerHTML = itemAddDate;
-
   itemsList.appendChild(itemContainer);
-  // itemsList.appendChild(itemTextDate);
 
   //reset input
   btnSubmit.disabled = true;
   btnSubmit.classList.add("disabledBtn");
   input.value = "";
 };
-
-// const localSt = (todoItems) => {
-//   if (localStorage.getItem("todoItems") === null) {
-//     todoItems = [];
-//   } else {
-//     todoItems = JSON.parse(localStorage.getItem("todoItems"));
-//   }
-// };
 
 const deleteAndCheck = (e) => {
   const element = e.target;
@@ -68,18 +55,14 @@ const deleteAndCheck = (e) => {
     toggleCheckText(element);
     parent.classList.toggle("greenBottomBorder");
   }
-
-  // if (element.classList[0] === "newItem") {
-  //   // toggleItemInfo(element.parentElement);
-  // }
 };
 
 const toggleCheckText = (el) => {
-  if (el.innerHTML === "✔") {
+  if (el.innerHTML === "✔️") {
     el.innerHTML = "✎";
     el.classList.add("btnReMark");
   } else {
-    el.innerHTML = "✔";
+    el.innerHTML = "✔️";
     el.classList.remove("btnReMark");
   }
 };
@@ -127,19 +110,19 @@ const getTodo = () => {
     itemContainer.appendChild(newItem);
 
     const btnMark = document.createElement("button");
-    btnMark.innerHTML = "✔";
+    btnMark.innerHTML = "✔️";
     btnMark.classList.add("btnMark");
     itemContainer.appendChild(btnMark);
 
     const btnDel = document.createElement("button");
-    btnDel.innerHTML = "✖";
+    btnDel.innerHTML = "✖️";
     btnDel.classList.add("btnDel");
     itemContainer.appendChild(btnDel);
 
-    const itemTextDate = document.createElement("span");
+    // const itemTextDate = document.createElement("span");
     // itemContainer.appendChild(itemTextDate);
-    itemTextDate.innerHTML = todo.date;
-    itemTextDate.classList.add("itemTextDate");
+    // itemTextDate.innerHTML = todo.date;
+    // itemTextDate.classList.add("itemTextDate");
 
     itemsList.appendChild(itemContainer);
     // itemContainer.appendChild(itemTextDate);
@@ -149,7 +132,11 @@ const getTodo = () => {
 const removeLocaltodoItems = (todo) => {
   let todoItems;
 
-  localStorage(todoItems);
+  if (localStorage.getItem("todoItems") === null) {
+    todoItems = [];
+  } else {
+    todoItems = JSON.parse(localStorage.getItem("todoItems"));
+  }
 
   const todoIndex = todo.children[0].innerText;
   todoItems.splice(todoItems.indexOf(todoIndex), 1);
