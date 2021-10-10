@@ -7,7 +7,7 @@ const addItem = (e) => {
 
   const date = new Date();
   const itemAddDate = date.toLocaleDateString();
-  console.log(itemAddDate);
+  //console.log(itemAddDate);
 
   const itemContainer = document.createElement("div");
   itemContainer.classList.add("item");
@@ -87,7 +87,7 @@ const localSave = (todo) => {
   }
 
   todoItems.push(todo);
-  console.log(todoItems);
+  // console.log(todoItems);
   localStorage.setItem("todoItems", JSON.stringify(todoItems));
 };
 
